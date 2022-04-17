@@ -53,3 +53,10 @@ h6{
   background-color: whitesmoke !important;
   border: 1px solid black !important;
 }
+
+@media only screen and (max-width:500px){
+  .anticon-minus-circle {
+    margin: 0 45% 10px 45% !important;
+    
+  }
+}
