@@ -111,9 +111,11 @@
 
 .template2-parent .col-sm-1{
     width: 2px !important;
+    overflow: hidden !important;
 }
 .template2-parent .col-sm-4 {
     width: 30% !important;
+    overflow: hidden !important;
 }
 .template2-parent h6 {
     margin: 0 !important;
@@ -121,6 +123,7 @@
 }
 .col-sm-6 {
     width: 60% !important;
+    overflow: hidden !important;
 }
 
 .template2-parent h1 {
