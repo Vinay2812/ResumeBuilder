@@ -1,0 +1,62 @@
+.auth-parent{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    overflow: hidden;
+}
+.brand{
+    font-size: 200px !important;
+    position: absolute;
+    z-index: -1;
+    text-align: center;
+    /* top: 15%; */
+    transform: rotate(-17deg) !important;
+    color: rgba(0, 0, 0, 0.70) !important;
+    /* line-height: 1.3; */
+}
+.auth-parent form{
+    width: 400px;
+    box-shadow: 0 0 3px gray;
+    padding: 20px;
+    background-color: rgba(245, 245, 245, 0.766) !important;
+    
+    z-index: 1;
+}
+
+.auth-parent h1{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.form-button{
+    border: none !important;
+}
+
+.auth-parent .ant-input{
+    border:none !important;
+}
+
+
+.auth-parent .anticon svg{
+    color: rgb(158, 150, 150);
+}
+
+.form-link{
+    color:#2a6074;
+}
+
+.auth-parent input::placeholder{
+    color: gray
+}
+
+@media only screen and (max-width:1000px){
+    .brand{
+        font-size: 100px !important;
+    }
+}
