@@ -10,7 +10,6 @@
     position: relative !important;
     width: 21rem;
     padding: auto !important;
-    overflow:hidden !important;
 }
 
 .home .template img{
@@ -93,7 +92,7 @@
 .template2-parent{
     color: rgba(0, 0, 0, 0.7) !important;
     padding: 2.5rem !important;
-    overflow: scroll !important;
+    /* overflow: scroll !important; */
     /* width: 80%;
     margin-left: 10%; */
     /* border: 1px solid gray; */
