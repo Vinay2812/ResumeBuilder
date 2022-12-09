@@ -15,12 +15,12 @@ app.use('/api/user/', userRoute)
 
 // for production level
 if(process.env.NODE_ENV === 'production'){
+    app.use(express.static(path.join(__dirname, "/client/build")));
 
-    app.use('/' , express.static(path.resolve(__dirname, "client", "build")))
-    app.get('*', (req , res)=>{
-        res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
-    })
+    app.get("*", (req, res)=>{
+        res.sendFile(path.join(__dirname, "/client/build", "index.html"));
+    });
 }
 
-app.get('/', (req, res) => res.send('hello'))
+// app.get('/', (req, res) => res.send('hello'))
 app.listen(port, () => console.log(`Listening ${port}`))
