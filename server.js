@@ -14,11 +14,14 @@ const path = require('path')
 app.use('/api/user/', userRoute)
 
 // for production level
-    app.use(express.static(path.join(__dirname, "/client/build")));
+if(process.env.NODE_ENV){
+    app.use(express.static(path.join(__dirname, path.join("client", "build"))));
 
     app.get("*", (req, res)=>{
-        res.sendFile(path.join(__dirname, "/client/build", "index.html"));
+        res.sendFile(path.join(__dirname, path.join(path.join("client", "build"), "index.html")));
     });
+}
+    
 
 // app.get('/', (req, res) => res.send('hello'))
 app.listen(port, () => console.log(`Listening ${port}`))
