@@ -6,7 +6,7 @@ import '../resources/authentication.css'
 
 import {Link, useNavigate} from 'react-router-dom'
 
-import axios from 'axios'
+import { API } from '../AxiosInstance';
 
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
@@ -17,7 +17,7 @@ function Login() {
   const onFinish = async(values) =>{
     setLoading(true);
       try {
-        const user = await axios.post('/api/user/login', values);
+        const user = await API.post('/api/user/login', values);
         setLoading(false);
         message.success('Login Successful');
         localStorage.setItem('resume_builder-user', JSON.stringify(user.data));

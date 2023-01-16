@@ -6,7 +6,7 @@ import '../resources/authentication.css'
 
 import {Link} from 'react-router-dom'
 
-import axios from 'axios'
+import { API } from '../AxiosInstance';
 
 import { useState } from 'react';
 
@@ -19,7 +19,7 @@ function Register() {
   const onFinish = async(values) =>{
       setLoading(true);
       try { 
-        await axios.post('/api/user/register', values);
+        await API.post('/api/user/register', values);
         setLoading(false);
         message.success('Registration successful')//ant design component
       } catch (error) {
