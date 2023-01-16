@@ -1,7 +1,10 @@
 const express = require('express')
-const app = express()
+const app = express();
 const dotenv = require("dotenv")
 dotenv.config();
+app.use(cors({
+    origin: "*"
+}))
 
 const dbConnect = require('./dbConnect')
 app.use(express.json())
