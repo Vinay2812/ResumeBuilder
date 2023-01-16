@@ -3,11 +3,11 @@ const app = express();
 const dotenv = require("dotenv")
 const cors = require("cors");
 dotenv.config();
-app.use(express.json())
 app.use(cors({
     origin: '*'
 }));
 
+app.use(express.json())
 const mongoose = require('mongoose')
 mongoose.connect(process.env.MONGODB, {useUnifiedTopology:true, useNewUrlParser:true})
 const connection = mongoose.connection
